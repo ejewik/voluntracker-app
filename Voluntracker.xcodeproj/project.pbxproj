@@ -13,6 +13,7 @@
 		4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCE23DC0CED008B2EB2 /* Voluntracker.xcdatamodeld */; };
 		4B7CFCD223DC0CF0008B2EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */; };
 		4B7CFCD523DC0CF0008B2EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCD323DC0CF0008B2EB2 /* LaunchScreen.storyboard */; };
+		4B7CFCE723DEC461008B2EB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCE623DEC461008B2EB2 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B7CFCD423DC0CF0008B2EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B7CFCD623DC0CF0008B2EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B7CFCE623DEC461008B2EB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4B7CFCE823DEC621008B2EB2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 		4B7CFCBB23DC0CED008B2EB2 = {
 			isa = PBXGroup;
 			children = (
+				4B7CFCE823DEC621008B2EB2 /* README.md */,
 				4B7CFCC623DC0CED008B2EB2 /* Voluntracker */,
 				4B7CFCC523DC0CED008B2EB2 /* Products */,
 			);
@@ -56,15 +60,88 @@
 		4B7CFCC623DC0CED008B2EB2 /* Voluntracker */ = {
 			isa = PBXGroup;
 			children = (
-				4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */,
-				4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */,
-				4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */,
-				4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */,
-				4B7CFCD323DC0CF0008B2EB2 /* LaunchScreen.storyboard */,
-				4B7CFCD623DC0CF0008B2EB2 /* Info.plist */,
-				4B7CFCCE23DC0CED008B2EB2 /* Voluntracker.xcdatamodeld */,
+				4B7CFCDE23DEC1CF008B2EB2 /* Controllers */,
+				4B7CFCDF23DEC1D6008B2EB2 /* Extensions */,
+				4B7CFCE323DEC1F3008B2EB2 /* Frameworks */,
+				4B7CFCE023DEC1E1008B2EB2 /* Helpers */,
+				4B7CFCDC23DEC1AC008B2EB2 /* Models */,
+				4B7CFCE223DEC1EF008B2EB2 /* Pods */,
+				4B7CFCE423DEC3F9008B2EB2 /* Protocols */,
+				4B7CFCE523DEC420008B2EB2 /* SupportFiles */,
+				4B7CFCDD23DEC1BC008B2EB2 /* Views */,
 			);
 			path = Voluntracker;
+			sourceTree = "<group>";
+		};
+		4B7CFCDC23DEC1AC008B2EB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B7CFCCE23DC0CED008B2EB2 /* Voluntracker.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B7CFCDD23DEC1BC008B2EB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B7CFCDE23DEC1CF008B2EB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B7CFCDF23DEC1D6008B2EB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B7CFCE023DEC1E1008B2EB2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4B7CFCE223DEC1EF008B2EB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4B7CFCE323DEC1F3008B2EB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B7CFCE423DEC3F9008B2EB2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4B7CFCE523DEC420008B2EB2 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */,
+				4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */,
+				4B7CFCD323DC0CF0008B2EB2 /* LaunchScreen.storyboard */,
+				4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */,
+				4B7CFCE623DEC461008B2EB2 /* Default-568h@2x.png */,
+				4B7CFCD623DC0CF0008B2EB2 /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B7CFCD523DC0CF0008B2EB2 /* LaunchScreen.storyboard in Resources */,
+				4B7CFCE723DEC461008B2EB2 /* Default-568h@2x.png in Resources */,
 				4B7CFCD223DC0CF0008B2EB2 /* Assets.xcassets in Resources */,
 				4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */,
 			);
@@ -288,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGAF8QBXHU;
-				INFOPLIST_FILE = Voluntracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Voluntracker/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PGAF8QBXHU;
-				INFOPLIST_FILE = Voluntracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Voluntracker/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
