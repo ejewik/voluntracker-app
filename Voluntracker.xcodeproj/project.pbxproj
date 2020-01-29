@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B170F6223DF997C0031C7D0 /* HoursTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6123DF997C0031C7D0 /* HoursTableViewExtension.swift */; };
-		4B170F6423DFA5730031C7D0 /* HoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6323DFA5730031C7D0 /* HoursTableViewCell.swift */; };
-		4B170F6623DFA5950031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6523DFA5950031C7D0 /* DonationTableViewCell.swift */; };
 		4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */; };
-		4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */; };
+		4B7CFCCA23DC0CED008B2EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */; };
 		4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */; };
 		4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCE23DC0CED008B2EB2 /* Voluntracker.xcdatamodeld */; };
 		4B7CFCD223DC0CF0008B2EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */; };
@@ -20,12 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B170F6123DF997C0031C7D0 /* HoursTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewExtension.swift; sourceTree = "<group>"; };
-		4B170F6323DFA5730031C7D0 /* HoursTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewCell.swift; sourceTree = "<group>"; };
-		4B170F6523DFA5950031C7D0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewController.swift; sourceTree = "<group>"; };
+		4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B7CFCCC23DC0CED008B2EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B7CFCCF23DC0CED008B2EB2 /* Voluntracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Voluntracker.xcdatamodel; sourceTree = "<group>"; };
 		4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,8 +84,6 @@
 		4B7CFCDD23DEC1BC008B2EB2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4B170F6323DFA5730031C7D0 /* HoursTableViewCell.swift */,
-				4B170F6523DFA5950031C7D0 /* DonationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,7 +91,7 @@
 		4B7CFCDE23DEC1CF008B2EB2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */,
+				4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,7 +99,6 @@
 		4B7CFCDF23DEC1D6008B2EB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4B170F6123DF997C0031C7D0 /* HoursTableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,11 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */,
-				4B170F6623DFA5950031C7D0 /* DonationTableViewCell.swift in Sources */,
-				4B170F6223DF997C0031C7D0 /* HoursTableViewExtension.swift in Sources */,
+				4B7CFCCA23DC0CED008B2EB2 /* ViewController.swift in Sources */,
 				4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */,
-				4B170F6423DFA5730031C7D0 /* HoursTableViewCell.swift in Sources */,
 				4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

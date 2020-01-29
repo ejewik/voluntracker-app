@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HoursTableViewController: UITableViewController {
+class HoursViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
