@@ -8,9 +8,9 @@
 
 import UIKit
 
-class EntryTableViewCell {
+class EntryTableViewCell : UITableViewCell {
     
     @IBOutlet weak var entryTitleLabel: UILabel!
-    @IBOutlet weak var clubLabel: UILabel!
+    @IBOutlet weak var organizationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
 }
