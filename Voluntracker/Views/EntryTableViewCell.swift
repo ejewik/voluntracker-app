@@ -10,7 +10,7 @@ import UIKit
 
 class EntryTableViewCell : UITableViewCell {
     
-    @IBOutlet weak var entryTitleLabel: UILabel!
-    @IBOutlet weak var organizationLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    var entryTitleLabel: UILabel!
+    var organizationLabel: UILabel!
+    weak var dateLabel: UILabel!
 }

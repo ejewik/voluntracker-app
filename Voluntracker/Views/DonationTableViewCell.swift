@@ -10,6 +10,6 @@ import UIKit
 
 class DonationTableViewCell : EntryTableViewCell {
     
-    @IBOutlet weak var itemCountLabel: UILabel!
-    @IBOutlet weak var dollarCountLabel: UILabel!
+    var itemCountLabel: UILabel!
+    var dollarCountLabel: UILabel!
 }
