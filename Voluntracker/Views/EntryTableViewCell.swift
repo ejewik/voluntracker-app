@@ -10,7 +10,18 @@ import UIKit
 
 class EntryTableViewCell : UITableViewCell {
     
-    var entryTitleLabel: UILabel!
-    var organizationLabel: UILabel!
-    weak var dateLabel: UILabel!
+    let entryTitleLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    let organizationLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    let dateLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
 }
