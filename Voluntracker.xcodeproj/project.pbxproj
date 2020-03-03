@@ -10,22 +10,25 @@
 		4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */; };
 		4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */; };
 		4B170F7223E1F88E0031C7D0 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F7123E1F88E0031C7D0 /* EntryTableViewCell.swift */; };
+		4B359D7223E6C5CE0082ED73 /* EntryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B359D7123E6C5CE0082ED73 /* EntryTableView.swift */; };
 		4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */; };
-		4B7CFCCA23DC0CED008B2EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */; };
+		4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */; };
 		4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */; };
 		4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCE23DC0CED008B2EB2 /* Voluntracker.xcdatamodeld */; };
 		4B7CFCD223DC0CF0008B2EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */; };
 		4B7CFCD523DC0CF0008B2EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCD323DC0CF0008B2EB2 /* LaunchScreen.storyboard */; };
 		4B7CFCE723DEC461008B2EB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCE623DEC461008B2EB2 /* Default-568h@2x.png */; };
+		4BAF986023E9D1BE005ADAB7 /* HoursTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF985F23E9D1BE005ADAB7 /* HoursTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewCell.swift; sourceTree = "<group>"; };
 		4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		4B170F7123E1F88E0031C7D0 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		4B359D7123E6C5CE0082ED73 /* EntryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableView.swift; sourceTree = "<group>"; };
 		4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewController.swift; sourceTree = "<group>"; };
 		4B7CFCCC23DC0CED008B2EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B7CFCCF23DC0CED008B2EB2 /* Voluntracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Voluntracker.xcdatamodel; sourceTree = "<group>"; };
 		4B7CFCD123DC0CF0008B2EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		4B7CFCD623DC0CF0008B2EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7CFCE623DEC461008B2EB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4B7CFCE823DEC621008B2EB2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4BAF985F23E9D1BE005ADAB7 /* HoursTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 				4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */,
 				4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */,
 				4B170F7123E1F88E0031C7D0 /* EntryTableViewCell.swift */,
+				4B359D7123E6C5CE0082ED73 /* EntryTableView.swift */,
+				4BAF985F23E9D1BE005ADAB7 /* HoursTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,7 +113,7 @@
 		4B7CFCDE23DEC1CF008B2EB2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B7CFCC923DC0CED008B2EB2 /* ViewController.swift */,
+				4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B170F7223E1F88E0031C7D0 /* EntryTableViewCell.swift in Sources */,
-				4B7CFCCA23DC0CED008B2EB2 /* ViewController.swift in Sources */,
+				4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */,
 				4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */,
+				4BAF986023E9D1BE005ADAB7 /* HoursTableView.swift in Sources */,
 				4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */,
+				4B359D7223E6C5CE0082ED73 /* EntryTableView.swift in Sources */,
 				4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */,
 				4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */,
 			);

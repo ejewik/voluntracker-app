@@ -10,7 +10,14 @@ import UIKit
 
 class HoursTableViewCell : EntryTableViewCell {
     
-    @IBOutlet weak var hourLabel: UILabel!
-    @IBOutlet weak var minuteLabel: UILabel!
+    let hourLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    let minuteLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
     
 }

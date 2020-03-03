@@ -8,9 +8,20 @@
 
 import UIKit
 
-class EntryTableViewCell {
+class EntryTableViewCell : UITableViewCell {
     
-    @IBOutlet weak var entryTitleLabel: UILabel!
-    @IBOutlet weak var clubLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    let entryTitleLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    let organizationLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    let dateLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
 }
