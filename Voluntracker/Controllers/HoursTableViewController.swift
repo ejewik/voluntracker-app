@@ -13,16 +13,20 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var hourDonationSegmentedButton: UISegmentedControl!
     var addEntryButton: UIButton!
     var editEntryButton: UIButton!
+    var safeArea: UILayoutGuide!
     
-    var hoursEntries = [String]()
+    var hoursEntries = [HoursEntry]()
     var hoursTableView: UITableView = HoursTableView()
+    var dummyData : [String] = ["bake sale", "fundraiser", "blanket making"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        safeArea = view.layoutMarginsGuide
         prepareTableView()
         addConstraintsToTableView()
+        //setRowSizeForTableView()
     }
-    
+
     func prepareTableView() {
         hoursTableView.dataSource = self
         hoursTableView.delegate = self
@@ -34,10 +38,16 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func addConstraintsToTableView() {
-        hoursTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        hoursTableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
         hoursTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         hoursTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         hoursTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    func setRowSizeForTableView() {
+        hoursTableView.rowHeight = UITableView.automaticDimension
+        hoursTableView.estimatedRowHeight = 44
+        
     }
 
 
@@ -46,7 +56,7 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
     extension HoursTableViewController {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 1;
+            return dummyData.count
             
         }
         
@@ -54,20 +64,18 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
             
             var cell = hoursTableView.dequeueReusableCell(withIdentifier: "HoursTableViewCell", for: indexPath) as! HoursTableViewCell
             //let hoursEntry = hoursEntries[indexPath.row]
-            cell.hourLabel.text = "6"
-            cell.minuteLabel.text = "6"
-            cell.dateLabel.text = "6"
-            cell.organizationLabel.text = "6"
-            //cell = makeCellFromHoursEntry(currentCell: cell, hoursEntry: hoursEntry)
+            let hoursEntry = dummyData[indexPath.row]
+            cell.textLabel?.text = "testing"
+            //cell = setCellTextFromHoursEntry(currentCell: cell, hoursEntry: hoursEntry)
             return cell
         }
         
-        func makeCellFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntry) -> HoursTableViewCell {
-            currentCell.entryTitleLabel.text = hoursEntry.entryTitle;
-            currentCell.organizationLabel.text = hoursEntry.organization;
-            //currentCell.dateLabel.text = hoursEntry.date?.convertToString() ?? "unknown"
-            currentCell.hourLabel.text = String(hoursEntry.hours);
-            currentCell.minuteLabel.text = String(hoursEntry.minutes);
+        func setCellTextFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntry) -> HoursTableViewCell {
+//            currentCell.entryTitleLabel.text = hoursEntry.entryTitle;
+//            currentCell.organizationLabel.text = hoursEntry.organization;
+//            currentCell.dateLabel.text = "placeholder date"
+//            currentCell.hourLabel.text = String(hoursEntry.hours);
+//            currentCell.minuteLabel.text = String(hoursEntry.minutes);
             
             return currentCell;
         }
