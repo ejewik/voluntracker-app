@@ -24,7 +24,6 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
         safeArea = view.layoutMarginsGuide
         prepareTableView()
         addConstraintsToTableView()
-        //setRowSizeForTableView()
     }
 
     func prepareTableView() {
@@ -33,8 +32,6 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
         hoursTableView.register(HoursTableViewCell.self, forCellReuseIdentifier: "HoursTableViewCell")
         view.addSubview(hoursTableView)
         hoursTableView.translatesAutoresizingMaskIntoConstraints = false
-        //hoursTableView.rowHeight = UITableView.automaticDimension
-        //hoursTableView.estimatedRowHeight = 44
     }
     
     func addConstraintsToTableView() {
@@ -43,14 +40,6 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
         hoursTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         hoursTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-    
-    func setRowSizeForTableView() {
-        hoursTableView.rowHeight = UITableView.automaticDimension
-        hoursTableView.estimatedRowHeight = 44
-        
-    }
-
-
 }
 
     extension HoursTableViewController {
@@ -71,11 +60,11 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         func setCellTextFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntry) -> HoursTableViewCell {
-//            currentCell.entryTitleLabel.text = hoursEntry.entryTitle;
-//            currentCell.organizationLabel.text = hoursEntry.organization;
-//            currentCell.dateLabel.text = "placeholder date"
-//            currentCell.hourLabel.text = String(hoursEntry.hours);
-//            currentCell.minuteLabel.text = String(hoursEntry.minutes);
+            currentCell.entryTitleLabel.text = hoursEntry.entryTitle;
+            currentCell.organizationLabel.text = hoursEntry.organization;
+            currentCell.dateLabel.text = "placeholder date"
+            currentCell.hourLabel.text = String(hoursEntry.hours);
+            currentCell.minuteLabel.text = String(hoursEntry.minutes);
             
             return currentCell;
         }
