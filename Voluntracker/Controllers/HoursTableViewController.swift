@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HoursTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HoursTableViewController: UITableViewController {
 
-    var hourDonationSegmentedButton: UISegmentedControl!
-    var addEntryButton: UIButton!
-    var editEntryButton: UIButton!
+    @IBOutlet var hourDonationSegmentedButton: UISegmentedControl!
+    @IBOutlet var addEntryButton: UIButton!
+    @IBOutlet var editEntryButton: UIButton!
     var safeArea: UILayoutGuide!
     
     var hoursEntries = [HoursEntry]()
@@ -23,7 +23,7 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
         prepareTableView()
-        addConstraintsToTableView()
+        //addConstraintsToTableView()
     }
 
     func prepareTableView() {
@@ -34,22 +34,17 @@ class HoursTableViewController: UIViewController, UITableViewDelegate, UITableVi
         hoursTableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func addConstraintsToTableView() {
-        hoursTableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        hoursTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        hoursTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        hoursTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
+    
 }
 
     extension HoursTableViewController {
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return dummyData.count
             
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             var cell = hoursTableView.dequeueReusableCell(withIdentifier: "HoursTableViewCell", for: indexPath) as! HoursTableViewCell
             //let hoursEntry = hoursEntries[indexPath.row]
