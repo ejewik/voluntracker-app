@@ -8,16 +8,12 @@
 
 import UIKit
 
-class HoursTableViewCell : EntryTableViewCell {
+class HoursTableViewCell : UITableViewCell {
     
-    let hourLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    let minuteLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    @IBOutlet var entryTitleLabel: UILabel!
+    @IBOutlet var organizationLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var hourLabel: UILabel!
+    @IBOutlet var minuteLabel: UILabel!
     
 }
