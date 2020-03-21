@@ -15,9 +15,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="C2G-OA-bXh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xag-Eb-iAJ">
+                                    <rect key="frame" x="280" y="68" width="50" height="38"/>
+                                    <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="UKo-WX-Fsf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                    <state key="normal" title="+">
+                                        <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addHoursEntryButtonTapped" destination="Iv9-hF-j8m" eventType="touchUpInside" id="pFv-zT-swL"/>
+                                    </connections>
+                                </button>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ffB-9t-rPP">
+                                    <rect key="frame" x="25" y="10" width="325" height="32"/>
+                                    <segments>
+                                        <segment title="Hours"/>
+                                        <segment title="Donations"/>
+                                    </segments>
+                                    <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </segmentedControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new event!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCp-gZ-cO5">
+                                    <rect key="frame" x="25" y="73" width="195" height="24"/>
+                                    <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lS-9F-vb2">
+                                    <rect key="frame" x="20" y="122" width="355" height="1"/>
+                                    <color key="backgroundColor" white="0.89857313370000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="xag-Eb-iAJ" firstAttribute="leading" secondItem="CCp-gZ-cO5" secondAttribute="trailing" constant="60" id="10H-US-jjO"/>
+                                <constraint firstAttribute="bottom" secondItem="9lS-9F-vb2" secondAttribute="bottom" id="60z-mz-FtT"/>
+                                <constraint firstItem="CCp-gZ-cO5" firstAttribute="top" secondItem="ffB-9t-rPP" secondAttribute="bottom" constant="32" id="HGn-Qn-pDk"/>
+                                <constraint firstItem="9lS-9F-vb2" firstAttribute="top" secondItem="C2G-OA-bXh" secondAttribute="top" constant="122" id="MgG-Rt-Xs9"/>
+                                <constraint firstAttribute="trailing" secondItem="xag-Eb-iAJ" secondAttribute="trailing" constant="45" id="OGl-gO-Klx"/>
+                                <constraint firstItem="ffB-9t-rPP" firstAttribute="leading" secondItem="C2G-OA-bXh" secondAttribute="leading" constant="25" id="SDG-ZR-iMu"/>
+                                <constraint firstItem="CCp-gZ-cO5" firstAttribute="leading" secondItem="C2G-OA-bXh" secondAttribute="leading" constant="25" id="dDs-H1-ZZy"/>
+                                <constraint firstItem="xag-Eb-iAJ" firstAttribute="top" secondItem="ffB-9t-rPP" secondAttribute="bottom" constant="27" id="eqw-61-Zmf"/>
+                                <constraint firstItem="ffB-9t-rPP" firstAttribute="top" secondItem="C2G-OA-bXh" secondAttribute="top" constant="10" id="ihy-1O-NXa"/>
+                                <constraint firstAttribute="trailing" secondItem="9lS-9F-vb2" secondAttribute="trailing" id="kff-Ec-s5R"/>
+                                <constraint firstItem="9lS-9F-vb2" firstAttribute="leading" secondItem="C2G-OA-bXh" secondAttribute="leading" constant="20" id="mGQ-fp-Icd"/>
+                                <constraint firstAttribute="trailing" secondItem="ffB-9t-rPP" secondAttribute="trailing" constant="25" id="tvs-od-KsG"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HoursTableViewCell" rowHeight="120" id="7us-PO-3Ge" customClass="HoursTableViewCell" customModule="Voluntracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7us-PO-3Ge" id="mAX-wv-YlN">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
@@ -98,6 +151,9 @@
                             <outlet property="delegate" destination="Iv9-hF-j8m" id="Dp2-ri-Edl"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="addEntryButton" destination="xag-Eb-iAJ" id="KjN-n5-gbi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Elr-3b-NoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

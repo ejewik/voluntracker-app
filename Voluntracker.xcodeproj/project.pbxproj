@@ -10,6 +10,7 @@
 		4B05B5B32424260900DA54A9 /* HoursEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B05B5B22424260900DA54A9 /* HoursEntry.swift */; };
 		4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */; };
 		4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */; };
+		4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */; };
 		4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */; };
 		4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */; };
 		4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */; };
@@ -19,10 +20,23 @@
 		4B7CFCE723DEC461008B2EB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCE623DEC461008B2EB2 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4B403EB62426AF5C0020F788 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B7CFCBC23DC0CED008B2EB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B7CFCC323DC0CED008B2EB2;
+			remoteInfo = Voluntracker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4B05B5B22424260900DA54A9 /* HoursEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursEntry.swift; sourceTree = "<group>"; };
 		4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewCell.swift; sourceTree = "<group>"; };
 		4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
+		4B403EB12426AF5C0020F788 /* HoursEntryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoursEntryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursEntryTests.swift; sourceTree = "<group>"; };
+		4B403EB52426AF5C0020F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B403EAE2426AF5C0020F788 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4B7CFCC123DC0CED008B2EB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,11 +83,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4B403EB22426AF5C0020F788 /* HoursEntryTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */,
+				4B403EB52426AF5C0020F788 /* Info.plist */,
+			);
+			path = HoursEntryTests;
+			sourceTree = "<group>";
+		};
 		4B7CFCBB23DC0CED008B2EB2 = {
 			isa = PBXGroup;
 			children = (
 				4B7CFCE823DEC621008B2EB2 /* README.md */,
 				4B7CFCC623DC0CED008B2EB2 /* Voluntracker */,
+				4B403EB22426AF5C0020F788 /* HoursEntryTests */,
 				4B7CFCC523DC0CED008B2EB2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */,
+				4B403EB12426AF5C0020F788 /* HoursEntryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +188,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4B403EB02426AF5C0020F788 /* HoursEntryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B403EB82426AF5C0020F788 /* Build configuration list for PBXNativeTarget "HoursEntryTests" */;
+			buildPhases = (
+				4B403EAD2426AF5C0020F788 /* Sources */,
+				4B403EAE2426AF5C0020F788 /* Frameworks */,
+				4B403EAF2426AF5C0020F788 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B403EB72426AF5C0020F788 /* PBXTargetDependency */,
+			);
+			name = HoursEntryTests;
+			productName = HoursEntryTests;
+			productReference = 4B403EB12426AF5C0020F788 /* HoursEntryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4B7CFCC323DC0CED008B2EB2 /* Voluntracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B7CFCD923DC0CF0008B2EB2 /* Build configuration list for PBXNativeTarget "Voluntracker" */;
@@ -179,10 +229,14 @@
 		4B7CFCBC23DC0CED008B2EB2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Emily Jewik";
 				TargetAttributes = {
+					4B403EB02426AF5C0020F788 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 4B7CFCC323DC0CED008B2EB2;
+					};
 					4B7CFCC323DC0CED008B2EB2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -202,11 +256,19 @@
 			projectRoot = "";
 			targets = (
 				4B7CFCC323DC0CED008B2EB2 /* Voluntracker */,
+				4B403EB02426AF5C0020F788 /* HoursEntryTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4B403EAF2426AF5C0020F788 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4B7CFCC223DC0CED008B2EB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +283,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4B403EAD2426AF5C0020F788 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4B7CFCC023DC0CED008B2EB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +305,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B403EB72426AF5C0020F788 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B7CFCC323DC0CED008B2EB2 /* Voluntracker */;
+			targetProxy = 4B403EB62426AF5C0020F788 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */ = {
@@ -256,6 +334,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4B403EB92426AF5C0020F788 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGAF8QBXHU;
+				INFOPLIST_FILE = HoursEntryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.EmilyJewik.HoursEntryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voluntracker.app/Voluntracker";
+			};
+			name = Debug;
+		};
+		4B403EBA2426AF5C0020F788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGAF8QBXHU;
+				INFOPLIST_FILE = HoursEntryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.EmilyJewik.HoursEntryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voluntracker.app/Voluntracker";
+			};
+			name = Release;
+		};
 		4B7CFCD723DC0CF0008B2EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,6 +531,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4B403EB82426AF5C0020F788 /* Build configuration list for PBXNativeTarget "HoursEntryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B403EB92426AF5C0020F788 /* Debug */,
+				4B403EBA2426AF5C0020F788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4B7CFCBF23DC0CED008B2EB2 /* Build configuration list for PBXProject "Voluntracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
