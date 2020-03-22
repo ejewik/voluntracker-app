@@ -15,7 +15,7 @@ class HoursTableViewController: UITableViewController {
     @IBOutlet var editEntryButton: UIButton!
     
     var hoursEntries = [HoursEntry]()
-    var dummyData : [HoursEntryTest] = [HoursEntryTest(hours: 1, minutes: 30, entryTitle: "title", organization: "unicef", content: "content", date: Date(timeIntervalSinceNow: 0)), HoursEntryTest(hours: 2, minutes: 60, entryTitle: "title2", organization: "sorop", content: "content2", date: Date(timeIntervalSinceNow: 0))]
+    var dummyData = [HoursEntryTest]()
     let cellReuseIdentifier = "HoursTableViewCell"
     
     override func viewDidLoad() {

@@ -354,6 +354,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="QOi-MI-DEA"/>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="contentTextView" destination="aCa-3r-2aH" id="ecL-HA-cIV"/>
+                        <outlet property="dateTextField" destination="0HQ-uU-kVu" id="dkM-W0-btm"/>
+                        <outlet property="eventEndTimeTextField" destination="Y1P-sd-Rjh" id="GAj-dh-ZOu"/>
+                        <outlet property="eventStartTimeTextField" destination="zdv-vR-ero" id="RYo-Sc-gEN"/>
+                        <outlet property="eventTitleTextField" destination="aLr-yN-FSY" id="oPn-DQ-iDj"/>
+                        <outlet property="organizationTextField" destination="kCh-So-uGd" id="IPz-vc-oH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4O-CX-wIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2Q9-L4-2fx" userLabel="Exit" sceneMemberID="exit"/>
