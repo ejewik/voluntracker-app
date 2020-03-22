@@ -355,12 +355,16 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="bottomLabel" destination="xk7-h1-aXR" id="Sbr-ng-2u0"/>
                         <outlet property="contentTextView" destination="aCa-3r-2aH" id="ecL-HA-cIV"/>
                         <outlet property="dateTextField" destination="0HQ-uU-kVu" id="dkM-W0-btm"/>
+                        <outlet property="doneButton" destination="gga-TZ-19E" id="C9d-i3-hBa"/>
                         <outlet property="eventEndTimeTextField" destination="Y1P-sd-Rjh" id="GAj-dh-ZOu"/>
                         <outlet property="eventStartTimeTextField" destination="zdv-vR-ero" id="RYo-Sc-gEN"/>
                         <outlet property="eventTitleTextField" destination="aLr-yN-FSY" id="oPn-DQ-iDj"/>
+                        <outlet property="middleLabel" destination="uSp-kX-PG3" id="pyB-4T-3yJ"/>
                         <outlet property="organizationTextField" destination="kCh-So-uGd" id="IPz-vc-oH6"/>
+                        <outlet property="topLabel" destination="v5N-Sk-7r7" id="4Zh-0f-LrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4O-CX-wIG" userLabel="First Responder" sceneMemberID="firstResponder"/>

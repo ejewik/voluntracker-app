@@ -12,6 +12,7 @@
 		4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */; };
 		4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */; };
 		4B403EBC2426BEE70020F788 /* CreateHoursEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */; };
+		4B403EBE242825940020F788 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EBD242825940020F788 /* DateExtension.swift */; };
 		4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */; };
 		4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */; };
 		4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursEntryTests.swift; sourceTree = "<group>"; };
 		4B403EB52426AF5C0020F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHoursEntryViewController.swift; sourceTree = "<group>"; };
+		4B403EBD242825940020F788 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		4B170F6C23E1F8280031C7D0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4B403EBD242825940020F788 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */,
 				4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */,
 				4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */,
+				4B403EBE242825940020F788 /* DateExtension.swift in Sources */,
 				4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */,
 				4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */,
 			);
