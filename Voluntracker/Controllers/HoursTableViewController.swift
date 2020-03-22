@@ -34,11 +34,18 @@ class HoursTableViewController: UITableViewController {
         switch identifier {
         case "createHoursEntry":
             print("Segue to CreateHoursEntryViewController - create hours entry")
+            
         case "displayHoursEntry":
             print("Segue to CreateHoursEntryViewController - display hours entry")
+            
         default:
-            print("Unexpected segue occurred")
+            print("unexpected segue identifier")
+            
         }
+    }
+    
+    @IBAction func unwindToHoursTableViewController(sender: UIStoryboardSegue) {
+        
     }
     
     
