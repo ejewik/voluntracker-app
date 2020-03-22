@@ -11,6 +11,7 @@
 		4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */; };
 		4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */; };
 		4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */; };
+		4B403EBC2426BEE70020F788 /* CreateHoursEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */; };
 		4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */; };
 		4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */; };
 		4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		4B403EB12426AF5C0020F788 /* HoursEntryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoursEntryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursEntryTests.swift; sourceTree = "<group>"; };
 		4B403EB52426AF5C0020F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHoursEntryViewController.swift; sourceTree = "<group>"; };
 		4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		4B7CFCC623DC0CED008B2EB2 /* Voluntracker */ = {
 			isa = PBXGroup;
 			children = (
+				4B7CFCE523DEC420008B2EB2 /* SupportFiles */,
 				4B170F6C23E1F8280031C7D0 /* Extensions */,
 				4B170F6B23E1F8210031C7D0 /* Views */,
 				4B7CFCDE23DEC1CF008B2EB2 /* Controllers */,
@@ -122,7 +125,6 @@
 				4B7CFCDC23DEC1AC008B2EB2 /* Models */,
 				4B7CFCE223DEC1EF008B2EB2 /* Pods */,
 				4B7CFCE423DEC3F9008B2EB2 /* Protocols */,
-				4B7CFCE523DEC420008B2EB2 /* SupportFiles */,
 			);
 			path = Voluntracker;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */,
+				4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B05B5B32424260900DA54A9 /* HoursEntry.swift in Sources */,
+				4B403EBC2426BEE70020F788 /* CreateHoursEntryViewController.swift in Sources */,
 				4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */,
 				4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */,
 				4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */,

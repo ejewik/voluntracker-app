@@ -28,9 +28,22 @@ class HoursTableViewController: UITableViewController {
         self.tableView.delegate = self
     }
     
-    @IBAction func addHoursEntryButtonTapped() {
-        print("hoursEntryButton was tapped")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "createHoursEntry":
+            print("Segue to CreateHoursEntryViewController - create hours entry")
+        case "displayHoursEntry":
+            print("Segue to CreateHoursEntryViewController - display hours entry")
+        default:
+            print("Unexpected segue occurred")
+        }
     }
+    
+    
+    
+   
     
     
 }
