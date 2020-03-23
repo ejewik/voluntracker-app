@@ -31,6 +31,9 @@ class CreateHoursEntryViewController : UIViewController {
         hideScrollLabels()
         addBorderUnderTextField(textField: eventTitleTextField)
         addBorderUnderTextField(textField: organizationTextField)
+        addBorderUnderTextField(textField: dateTextField)
+        addBorderUnderTextField(textField: eventStartTimeTextField)
+        addBorderUnderTextField(textField: eventEndTimeTextField)
         formatContentTextView()
         doneButton.layer.cornerRadius = 20
         setUpDatePickerEmbeddedInTextField()
@@ -96,6 +99,24 @@ class CreateHoursEntryViewController : UIViewController {
         dateTextField.text = datePicker.date.convertToString()
     }
     
+    //Declared variable types to make conversion to hours more clear
+    //Created finalRoundedHourCount in order to store the final integer value of the hours
+    func calculateHours(eventStartTime: Date, eventEndTime: Date) -> Int {
+        
+        var finalRoundedHourCount : Int
+        
+        if eventStartTime < eventEndTime {
+            let intervalBetweenStartEnd : DateInterval = DateInterval(start: eventStartTime, end: eventEndTime)
+            let hourCount : Double = intervalBetweenStartEnd.duration / 3600.0
+            finalRoundedHourCount = Int(round(hourCount))
+            
+        } else {
+            finalRoundedHourCount = 0
+        }
+        
+        return finalRoundedHourCount
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
@@ -105,6 +126,9 @@ class CreateHoursEntryViewController : UIViewController {
             hoursEntry.entryTitle = eventTitleTextField.text ?? ""
             hoursEntry.content = contentTextView.text ?? ""
             hoursEntry.organization = organizationTextField.text ?? ""
+            hoursEntry.date = dateFieldPicker.date
+            let hours : Int = calculateHours(eventStartTime: eventStartTimePicker.date, eventEndTime: eventEndTimePicker.date)
+            print("Hours: \(hours)")
             
             let destination = segue.destination as! HoursTableViewController
             destination.dummyData.append(hoursEntry)

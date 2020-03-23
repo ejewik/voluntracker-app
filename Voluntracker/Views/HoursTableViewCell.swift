@@ -10,10 +10,14 @@ import UIKit
 
 class HoursTableViewCell : UITableViewCell {
     
-    @IBOutlet var entryTitleLabel: UILabel!
-    @IBOutlet var organizationLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var hourLabel: UILabel!
-    @IBOutlet var minuteLabel: UILabel!
+    @IBOutlet var entryTitleLabel : UILabel!
+    @IBOutlet var organizationLabel : UILabel!
+    @IBOutlet var dateLabel : UILabel!
+    @IBOutlet var hourLabel : UILabel! = {
+        let label = UILabel()
+        label.layer.cornerRadius = 20
+        return label
+    }()
+    @IBOutlet var minuteLabel : UILabel!
     
 }
