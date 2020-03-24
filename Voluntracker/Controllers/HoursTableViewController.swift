@@ -76,11 +76,11 @@ class HoursTableViewController: UITableViewController {
         }
         
         func setCellTextFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntryTest) -> HoursTableViewCell {
-            currentCell.entryTitleLabel?.text = hoursEntry.entryTitle;
-            currentCell.organizationLabel?.text = hoursEntry.organization;
-            currentCell.dateLabel?.text = "placeholder date"
-            currentCell.hourLabel?.text = String(hoursEntry.hours);
-            currentCell.minuteLabel?.text = String(hoursEntry.minutes);
+            currentCell.entryTitleLabel?.text = hoursEntry.entryTitle
+            currentCell.organizationLabel?.text = hoursEntry.organization
+            currentCell.dateLabel?.text = hoursEntry.date.convertToString()
+            currentCell.hourLabel?.text = String(hoursEntry.hours)
+            currentCell.minuteLabel?.text = String(hoursEntry.minutes)
             
             return currentCell;
         }

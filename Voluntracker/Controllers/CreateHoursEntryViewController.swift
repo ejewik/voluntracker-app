@@ -99,22 +99,41 @@ class CreateHoursEntryViewController : UIViewController {
         dateTextField.text = datePicker.date.convertToString()
     }
     
-    //Declared variable types to make conversion to hours more clear
-    //Created finalRoundedHourCount in order to store the final integer value of the hours
-    func calculateHours(eventStartTime: Date, eventEndTime: Date) -> Int {
-        
-        var finalRoundedHourCount : Int
-        
-        if eventStartTime < eventEndTime {
-            let intervalBetweenStartEnd : DateInterval = DateInterval(start: eventStartTime, end: eventEndTime)
-            let hourCount : Double = intervalBetweenStartEnd.duration / 3600.0
-            finalRoundedHourCount = Int(round(hourCount))
+    func convertHoursAndMinutesToStrings(eventStartTime: Date, eventEndTime: Date) -> (hoursString: String, minutesString: String) {
+        var hoursAsString : String
+        var minutesAsString : String
+
+        let dateFormatter = DateComponentsFormatter()
+        dateFormatter.unitsStyle = .full
+        dateFormatter.allowedUnits = [.month, .day, .hour, .minute, .second]
+        dateFormatter.maximumUnitCount = 2
+        let hoursAndMinutesAsString = dateFormatter.string(from: eventStartTime, to: eventEndTime)
+        let listOfHourMinuteLabelsAndCounts = hoursAndMinutesAsString?.split(separator: " ")
+        if hoursAndMinutesAsString?.firstIndex(of: "h") != nil && hoursAndMinutesAsString?.firstIndex(of: "m") != nil {
+            minutesAsString = String(listOfHourMinuteLabelsAndCounts![2])
+            hoursAsString = String(listOfHourMinuteLabelsAndCounts![0])
+
+        } else if hoursAndMinutesAsString?.firstIndex(of: "h") != nil && hoursAndMinutesAsString?.firstIndex(of: "m") == nil {
+            minutesAsString = "0"
+            hoursAsString = String(listOfHourMinuteLabelsAndCounts![0])
             
-        } else {
-            finalRoundedHourCount = 0
+        } else if hoursAndMinutesAsString?.firstIndex(of: "m") != nil && hoursAndMinutesAsString?.firstIndex(of: "h") == nil {
+            minutesAsString = String(listOfHourMinuteLabelsAndCounts![0])
+            hoursAsString = "0"
+        }
+        else {
+            minutesAsString = "0"
+            hoursAsString = "0"
         }
         
-        return finalRoundedHourCount
+        if Int(hoursAsString)! < 0 {
+            hoursAsString = "0"
+            minutesAsString = "0"
+        }
+
+        return (hoursAsString, minutesAsString)
+        
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -127,9 +146,12 @@ class CreateHoursEntryViewController : UIViewController {
             hoursEntry.content = contentTextView.text ?? ""
             hoursEntry.organization = organizationTextField.text ?? ""
             hoursEntry.date = dateFieldPicker.date
-            let hours : Int = calculateHours(eventStartTime: eventStartTimePicker.date, eventEndTime: eventEndTimePicker.date)
-            print("Hours: \(hours)")
-            
+            hoursEntry.timeFrom = eventStartTimePicker.date
+            hoursEntry.timeTo = eventEndTimePicker.date
+            let (hoursString, minutesString) = convertHoursAndMinutesToStrings(eventStartTime: hoursEntry.timeFrom, eventEndTime: hoursEntry.timeTo)
+            hoursEntry.hours = Int(hoursString)!
+            hoursEntry.minutes = Int(minutesString)!
+    
             let destination = segue.destination as! HoursTableViewController
             destination.dummyData.append(hoursEntry)
             destination.tableView.reloadData()
