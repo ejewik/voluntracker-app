@@ -14,13 +14,20 @@ class HoursTableViewController: UITableViewController {
     @IBOutlet var addEntryButton: UIButton!
     @IBOutlet var editEntryButton: UIButton!
     
-    var hoursEntries = [HoursEntry]()
+    var hoursEntries = [HoursEntry]() {
+        didSet {
+            self.tableView.reloadData()
+            CoreDataHelper.saveHoursEntry() //see if this is necessary
+        }
+    }
+    
     var dummyData = [HoursEntryTest]()
     let cellReuseIdentifier = "HoursTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTableView()
+        hoursEntries = CoreDataHelper.retrieveHoursEntries()
     }
 
     func prepareTableView() {
@@ -32,40 +39,37 @@ class HoursTableViewController: UITableViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-        case "createHoursEntry":
-            print("Segue to CreateHoursEntryViewController - create hours entry")
-            
         case "displayHoursEntry":
-            print("Segue to CreateHoursEntryViewController - display hours entry")
-            
+            print("Segue to displayHoursEntryViewController - display hours entry")
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let hoursEntry = hoursEntries[indexPath.row]
+            let destination = segue.destination as! CreateHoursEntryViewController
+            destination.hoursEntry = hoursEntry
+    
         default:
-            print("unexpected segue identifier")
+            print("unexpected segue identifier open entry")
             
         }
     }
     
     @IBAction func unwindToHoursTableViewController(sender: UIStoryboardSegue) {
+        hoursEntries = CoreDataHelper.retrieveHoursEntries()
         
     }
-    
-    
-    
-   
-    
     
 }
 
     extension HoursTableViewController {
         
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return dummyData.count
+            return hoursEntries.count
             
         }
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             var cell : HoursTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! HoursTableViewCell
-            let hoursEntry = dummyData[indexPath.row]
+            let hoursEntry = hoursEntries[indexPath.row]
             cell = setCellTextFromHoursEntry(currentCell: cell, hoursEntry: hoursEntry)
             
             return cell
@@ -75,10 +79,10 @@ class HoursTableViewController: UITableViewController {
             return 1
         }
         
-        func setCellTextFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntryTest) -> HoursTableViewCell {
+        func setCellTextFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntry) -> HoursTableViewCell {
             currentCell.entryTitleLabel?.text = hoursEntry.entryTitle
             currentCell.organizationLabel?.text = hoursEntry.organization
-            currentCell.dateLabel?.text = hoursEntry.date.convertToString()
+            currentCell.dateLabel?.text = hoursEntry.date!.convertToString()
             currentCell.hourLabel?.text = String(hoursEntry.hours)
             currentCell.minuteLabel?.text = String(hoursEntry.minutes)
             

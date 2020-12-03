@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B05B5B32424260900DA54A9 /* HoursEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B05B5B22424260900DA54A9 /* HoursEntry.swift */; };
+		4B098544257794B800BFE7A0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B098543257794B800BFE7A0 /* CoreDataHelper.swift */; };
 		4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */; };
 		4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */; };
 		4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		4B05B5B22424260900DA54A9 /* HoursEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursEntry.swift; sourceTree = "<group>"; };
+		4B098543257794B800BFE7A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewCell.swift; sourceTree = "<group>"; };
 		4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		4B403EB12426AF5C0020F788 /* HoursEntryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoursEntryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 		4B7CFCE023DEC1E1008B2EB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4B098543257794B800BFE7A0 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */,
 				4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */,
 				4B403EBE242825940020F788 /* DateExtension.swift in Sources */,
+				4B098544257794B800BFE7A0 /* CoreDataHelper.swift in Sources */,
 				4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */,
 				4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */,
 			);

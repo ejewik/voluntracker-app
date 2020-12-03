@@ -12,6 +12,8 @@ class CreateHoursEntryViewController : UIViewController {
     
     //MARK: Properties
     
+    var hoursEntry: HoursEntry?
+    
     @IBOutlet var eventTitleTextField: UITextField!
     @IBOutlet var dateTextField: UITextField!
     @IBOutlet var eventStartTimeTextField: UITextField!
@@ -99,6 +101,8 @@ class CreateHoursEntryViewController : UIViewController {
         dateTextField.text = datePicker.date.convertToString()
     }
     
+    // TODO: put this function and date functions in another file
+    
     func convertHoursAndMinutesToStrings(eventStartTime: Date, eventEndTime: Date) -> (hoursString: String, minutesString: String) {
         var hoursAsString : String
         var minutesAsString : String
@@ -136,30 +140,46 @@ class CreateHoursEntryViewController : UIViewController {
        
     }
     
+    func setHoursEntryAttributes() -> HoursEntry {
+        hoursEntry?.entryTitle = eventTitleTextField.text ?? ""
+        hoursEntry?.content = contentTextView.text ?? ""
+        hoursEntry?.organization = organizationTextField.text ?? ""
+        hoursEntry?.date = dateFieldPicker.date
+        hoursEntry?.timeFrom = eventStartTimePicker.date
+        hoursEntry?.timeTo = eventEndTimePicker.date
+        
+        let (hoursString, minutesString) = convertHoursAndMinutesToStrings(eventStartTime: hoursEntry!.timeFrom!, eventEndTime: hoursEntry!.timeTo!)
+        hoursEntry!.hours = Int16(hoursString)!
+        hoursEntry!.minutes = Int16(minutesString)!
+        
+        return hoursEntry!
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
+        guard let identifier = segue.identifier,
+        let destination = segue.destination as? HoursTableViewController
+        else { return }
         
         switch identifier {
-        case "done":
-            let hoursEntry = HoursEntryTest()
-            hoursEntry.entryTitle = eventTitleTextField.text ?? ""
-            hoursEntry.content = contentTextView.text ?? ""
-            hoursEntry.organization = organizationTextField.text ?? ""
-            hoursEntry.date = dateFieldPicker.date
-            hoursEntry.timeFrom = eventStartTimePicker.date
-            hoursEntry.timeTo = eventEndTimePicker.date
-            let (hoursString, minutesString) = convertHoursAndMinutesToStrings(eventStartTime: hoursEntry.timeFrom, eventEndTime: hoursEntry.timeTo)
-            hoursEntry.hours = Int(hoursString)!
-            hoursEntry.minutes = Int(minutesString)!
-    
-            let destination = segue.destination as! HoursTableViewController
-            destination.dummyData.append(hoursEntry)
-            destination.tableView.reloadData()
+            
+        case "done" where hoursEntry == nil:
+            
+            hoursEntry = CoreDataHelper.newHoursEntry()
+            hoursEntry = setHoursEntryAttributes()
+            
+            CoreDataHelper.saveHoursEntry()
             
             print("done button tapped")
             
+        case "done" where hoursEntry != nil:
+            
+            hoursEntry = setHoursEntryAttributes()
+            hoursEntry = setHoursEntryAttributes()
+            
+            CoreDataHelper.saveHoursEntry()
+                        
         default:
-            print("unexpected segue identifier")
+            print("unexpected segue identifier make entry")
         }
     }
 }
