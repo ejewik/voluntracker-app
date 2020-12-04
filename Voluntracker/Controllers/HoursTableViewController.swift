@@ -9,6 +9,12 @@
 import UIKit
 
 class HoursTableViewController: UITableViewController {
+    
+    //TODO: handle description var
+    //TODO: figure out how to refactor ui code into another file
+    //TODO: add operations (delete, cancel entry)
+    //TODO: figure out how to handle segmented control for donations
+    //also edit entry button iboutlet is not connected
 
     @IBOutlet var hourDonationSegmentedButton: UISegmentedControl!
     @IBOutlet var addEntryButton: UIButton!
@@ -21,7 +27,6 @@ class HoursTableViewController: UITableViewController {
         }
     }
     
-    var dummyData = [HoursEntryTest]()
     let cellReuseIdentifier = "HoursTableViewCell"
     
     override func viewDidLoad() {

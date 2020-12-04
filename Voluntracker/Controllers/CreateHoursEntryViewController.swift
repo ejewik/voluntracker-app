@@ -31,11 +31,6 @@ class CreateHoursEntryViewController : UIViewController {
     
     override func viewDidLoad() {
         hideScrollLabels()
-        addBorderUnderTextField(textField: eventTitleTextField)
-        addBorderUnderTextField(textField: organizationTextField)
-        addBorderUnderTextField(textField: dateTextField)
-        addBorderUnderTextField(textField: eventStartTimeTextField)
-        addBorderUnderTextField(textField: eventEndTimeTextField)
         formatContentTextView()
         doneButton.layer.cornerRadius = 20
         setUpDatePickerEmbeddedInTextField()
@@ -48,17 +43,6 @@ class CreateHoursEntryViewController : UIViewController {
         topLabel.isHidden = true
         middleLabel.isHidden = true
         bottomLabel.isHidden = true
-    }
-    
-    func addBorderUnderTextField(textField: UITextField) {
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.darkGray.cgColor
-        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-        
-        border.borderWidth = width
-        textField.layer.addSublayer(border)
-        textField.layer.masksToBounds = true
     }
     
     func formatContentTextView() {
