@@ -85,45 +85,6 @@ class CreateHoursEntryViewController : UIViewController {
         dateTextField.text = datePicker.date.convertToString()
     }
     
-    // TODO: put this function and date functions in another file
-    
-    func convertHoursAndMinutesToStrings(eventStartTime: Date, eventEndTime: Date) -> (hoursString: String, minutesString: String) {
-        var hoursAsString : String
-        var minutesAsString : String
-
-        let dateFormatter = DateComponentsFormatter()
-        dateFormatter.unitsStyle = .full
-        dateFormatter.allowedUnits = [.month, .day, .hour, .minute, .second]
-        dateFormatter.maximumUnitCount = 2
-        let hoursAndMinutesAsString = dateFormatter.string(from: eventStartTime, to: eventEndTime)
-        let listOfHourMinuteLabelsAndCounts = hoursAndMinutesAsString?.split(separator: " ")
-        if hoursAndMinutesAsString?.firstIndex(of: "h") != nil && hoursAndMinutesAsString?.firstIndex(of: "m") != nil {
-            minutesAsString = String(listOfHourMinuteLabelsAndCounts![2])
-            hoursAsString = String(listOfHourMinuteLabelsAndCounts![0])
-
-        } else if hoursAndMinutesAsString?.firstIndex(of: "h") != nil && hoursAndMinutesAsString?.firstIndex(of: "m") == nil {
-            minutesAsString = "0"
-            hoursAsString = String(listOfHourMinuteLabelsAndCounts![0])
-            
-        } else if hoursAndMinutesAsString?.firstIndex(of: "m") != nil && hoursAndMinutesAsString?.firstIndex(of: "h") == nil {
-            minutesAsString = String(listOfHourMinuteLabelsAndCounts![0])
-            hoursAsString = "0"
-        }
-        else {
-            minutesAsString = "0"
-            hoursAsString = "0"
-        }
-        
-        if Int(hoursAsString)! < 0 {
-            hoursAsString = "0"
-            minutesAsString = "0"
-        }
-
-        return (hoursAsString, minutesAsString)
-        
-       
-    }
-    
     func setHoursEntryAttributes() -> HoursEntry {
         hoursEntry?.entryTitle = eventTitleTextField.text ?? ""
         hoursEntry?.content = contentTextView.text ?? ""
@@ -132,7 +93,9 @@ class CreateHoursEntryViewController : UIViewController {
         hoursEntry?.timeFrom = eventStartTimePicker.date
         hoursEntry?.timeTo = eventEndTimePicker.date
         
-        let (hoursString, minutesString) = convertHoursAndMinutesToStrings(eventStartTime: hoursEntry!.timeFrom!, eventEndTime: hoursEntry!.timeTo!)
+        let eventStartTime = hoursEntry!.timeFrom!
+        
+        let (hoursString, minutesString) = eventStartTime.convertTimeDifference(eventEndTime: hoursEntry!.timeTo!)
         hoursEntry!.hours = Int16(hoursString)!
         hoursEntry!.minutes = Int16(minutesString)!
         
