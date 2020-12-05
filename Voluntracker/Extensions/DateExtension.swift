@@ -9,7 +9,8 @@
 import Foundation
 
 extension Date {
-    func convertToString() -> String {
+    
+    func convertDateToString() -> String {
         return DateFormatter.localizedString(from: self, dateStyle: DateFormatter.Style.medium, timeStyle: DateFormatter.Style.none)
     }
     

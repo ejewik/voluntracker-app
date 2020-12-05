@@ -10,6 +10,8 @@
 		4B05B5B32424260900DA54A9 /* HoursEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B05B5B22424260900DA54A9 /* HoursEntry.swift */; };
 		4B098544257794B800BFE7A0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B098543257794B800BFE7A0 /* CoreDataHelper.swift */; };
 		4B098549257A501800BFE7A0 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B098548257A501800BFE7A0 /* UnderlineTextField.swift */; };
+		4B09854B257A5BD100BFE7A0 /* BorderlessTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09854A257A5BD100BFE7A0 /* BorderlessTextView.swift */; };
+		4B09854D257BA4E200BFE7A0 /* DatePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09854C257BA4E200BFE7A0 /* DatePickerExtension.swift */; };
 		4B170F6E23E1F8520031C7D0 /* HoursTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */; };
 		4B170F7023E1F85E0031C7D0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */; };
 		4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */; };
@@ -38,6 +40,8 @@
 		4B05B5B22424260900DA54A9 /* HoursEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursEntry.swift; sourceTree = "<group>"; };
 		4B098543257794B800BFE7A0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		4B098548257A501800BFE7A0 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		4B09854A257A5BD100BFE7A0 /* BorderlessTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderlessTextView.swift; sourceTree = "<group>"; };
+		4B09854C257BA4E200BFE7A0 /* DatePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerExtension.swift; sourceTree = "<group>"; };
 		4B170F6D23E1F8520031C7D0 /* HoursTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewCell.swift; sourceTree = "<group>"; };
 		4B170F6F23E1F85E0031C7D0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		4B403EB12426AF5C0020F788 /* HoursEntryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoursEntryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				4B098548257A501800BFE7A0 /* UnderlineTextField.swift */,
+				4B09854A257A5BD100BFE7A0 /* BorderlessTextView.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4B403EBD242825940020F788 /* DateExtension.swift */,
+				4B09854C257BA4E200BFE7A0 /* DatePickerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,10 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B09854B257A5BD100BFE7A0 /* BorderlessTextView.swift in Sources */,
 				4B05B5B32424260900DA54A9 /* HoursEntry.swift in Sources */,
 				4B403EBC2426BEE70020F788 /* CreateHoursEntryViewController.swift in Sources */,
 				4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */,
 				4B7CFCD023DC0CED008B2EB2 /* Voluntracker.xcdatamodeld in Sources */,
+				4B09854D257BA4E200BFE7A0 /* DatePickerExtension.swift in Sources */,
 				4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */,
 				4B403EBE242825940020F788 /* DateExtension.swift in Sources */,
 				4B098549257A501800BFE7A0 /* UnderlineTextField.swift in Sources */,

@@ -31,11 +31,13 @@ class CreateHoursEntryViewController : UIViewController {
     
     override func viewDidLoad() {
         hideScrollLabels()
-        formatContentTextView()
         doneButton.layer.cornerRadius = 20
-        setUpDatePickerEmbeddedInTextField()
-        setUpEventStartPickerEmbeddedInTextField()
-        setUpEventEndPickerEmbeddedInTextField()
+        dateTextField = dateFieldPicker.setUpDatePickerEmbeddedInTextField(textField: dateTextField, isTimePicker: false)
+        eventStartTimeTextField = eventStartTimePicker.setUpDatePickerEmbeddedInTextField(textField: eventStartTimeTextField, isTimePicker: true)
+        eventEndTimeTextField = eventEndTimePicker.setUpDatePickerEmbeddedInTextField(textField: eventEndTimeTextField, isTimePicker: true)
+        dateFieldPicker.addTarget(self, action: #selector(CreateHoursEntryViewController.dateChanged(datePicker:)), for: .valueChanged)
+        eventStartTimePicker.addTarget(self, action: #selector(CreateHoursEntryViewController.eventStartTimeChanged(datePicker:)), for: .valueChanged)
+        eventEndTimePicker.addTarget(self, action: #selector(CreateHoursEntryViewController.eventEndTimeChanged(datePicker:)), for: .valueChanged)
         
     }
     
@@ -45,44 +47,16 @@ class CreateHoursEntryViewController : UIViewController {
         bottomLabel.isHidden = true
     }
     
-    func formatContentTextView() {
-        contentTextView.layer.borderWidth = 0.4
-        contentTextView.layer.borderColor = UIColor.lightGray.cgColor
-        contentTextView.layer.cornerRadius = 3
-        contentTextView.clipsToBounds = true
-    }
-    
-    func setUpDatePickerEmbeddedInTextField() {
-        dateFieldPicker.datePickerMode = .date
-        dateTextField.text = dateFieldPicker.date.convertToString()
-        dateFieldPicker.addTarget(self, action: #selector(CreateHoursEntryViewController.dateChanged(datePicker:)), for: .valueChanged)
-        dateTextField.inputView = dateFieldPicker
-    }
-    
-    func setUpEventStartPickerEmbeddedInTextField() {
-        eventStartTimePicker.datePickerMode = .time
-        eventStartTimeTextField.text = eventStartTimePicker.date.convertTimeToString()
-        eventStartTimePicker.addTarget(self, action: #selector(CreateHoursEntryViewController.eventStartTimeChanged(datePicker:)), for: .valueChanged)
-        eventStartTimeTextField.inputView = eventStartTimePicker
-    }
-    
-    func setUpEventEndPickerEmbeddedInTextField() {
-        eventEndTimePicker.datePickerMode = .time
-        eventEndTimeTextField.text = eventEndTimePicker.date.convertTimeToString()
-        eventEndTimePicker.addTarget(self, action: #selector(CreateHoursEntryViewController.eventEndTimeChanged(datePicker:)), for: .valueChanged)
-        eventEndTimeTextField.inputView = eventEndTimePicker
-    }
-    
     @objc func eventEndTimeChanged(datePicker: UIDatePicker) {
         eventEndTimeTextField.text = eventEndTimePicker.date.convertTimeToString()
     }
-    
+
     @objc func eventStartTimeChanged(datePicker: UIDatePicker) {
         eventStartTimeTextField.text = eventStartTimePicker.date.convertTimeToString()
     }
-    
+
     @objc func dateChanged(datePicker: UIDatePicker) {
-        dateTextField.text = datePicker.date.convertToString()
+        dateTextField.text = datePicker.date.convertDateToString()
     }
     
     func setHoursEntryAttributes() -> HoursEntry {

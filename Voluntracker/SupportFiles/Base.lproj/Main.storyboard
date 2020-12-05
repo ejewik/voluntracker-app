@@ -247,7 +247,7 @@
                                                 <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a description here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-3r-2aH">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a description here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-3r-2aH" customClass="BorderlessTextView" customModule="Voluntracker" customModuleProvider="target">
                                                 <rect key="frame" x="38" y="425" width="240" height="234"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

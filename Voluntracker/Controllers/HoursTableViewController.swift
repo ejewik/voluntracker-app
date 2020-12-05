@@ -10,11 +10,12 @@ import UIKit
 
 class HoursTableViewController: UITableViewController {
     
-    //TODO: handle description var
+    //TODO: handle description var (make it show! check if borderless text view class works)
     //TODO: figure out how to refactor ui code into another file
     //TODO: add operations (delete, cancel entry)
     //TODO: figure out how to handle segmented control for donations
     //also edit entry button iboutlet is not connected
+    //possible approach to refactoring date code: use date extension and use text field as function arg and keep #selector part in VC?
 
     @IBOutlet var hourDonationSegmentedButton: UISegmentedControl!
     @IBOutlet var addEntryButton: UIButton!
@@ -87,7 +88,7 @@ class HoursTableViewController: UITableViewController {
         func setCellTextFromHoursEntry(currentCell: HoursTableViewCell, hoursEntry: HoursEntry) -> HoursTableViewCell {
             currentCell.entryTitleLabel?.text = hoursEntry.entryTitle
             currentCell.organizationLabel?.text = hoursEntry.organization
-            currentCell.dateLabel?.text = hoursEntry.date!.convertToString()
+            currentCell.dateLabel?.text = hoursEntry.date!.convertDateToString()
             currentCell.hourLabel?.text = String(hoursEntry.hours)
             currentCell.minuteLabel?.text = String(hoursEntry.minutes)
             
