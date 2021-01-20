@@ -16,6 +16,7 @@ class HoursTableViewController: UITableViewController {
     //TODO: figure out how to handle segmented control for donations
     //also edit entry button iboutlet is not connected
     //possible approach to refactoring date code: use date extension and use text field as function arg and keep #selector part in VC?
+    //need to make time to rebuild createentryvc ui from scratch
 
     @IBOutlet var hourDonationSegmentedButton: UISegmentedControl!
     @IBOutlet var addEntryButton: UIButton!
