@@ -383,11 +383,11 @@
                     <connections>
                         <outlet property="bottomLabel" destination="pxk-1z-0kp" id="hYw-q3-3bs"/>
                         <outlet property="contentTextView" destination="Yai-PD-xi3" id="3Dd-Hf-f9D"/>
-                        <outlet property="dateTextField" destination="dah-KO-ibd" id="lOf-CG-ctY"/>
+                        <outlet property="dateTextField" destination="dah-KO-ibd" id="CFS-O0-4DW"/>
                         <outlet property="doneButton" destination="3hg-Eh-7zd" id="Bdv-ZS-5Zn"/>
                         <outlet property="eventEndTimeTextField" destination="6lX-dd-0vh" id="Km8-6e-qnB"/>
                         <outlet property="eventStartTimeTextField" destination="oWe-fh-B3e" id="EZc-QW-dV5"/>
-                        <outlet property="eventTitleTextField" destination="hjK-pL-IeC" id="aqP-RE-dFH"/>
+                        <outlet property="eventTitleTextField" destination="hjK-pL-IeC" id="UdJ-IH-ah2"/>
                         <outlet property="middleLabel" destination="5pr-bX-gm9" id="SmV-Es-0Ug"/>
                         <outlet property="organizationTextField" destination="YmU-pq-9lP" id="9Jf-jR-ojC"/>
                         <outlet property="topLabel" destination="ia8-pN-rsa" id="WpO-MJ-K5C"/>

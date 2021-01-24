@@ -38,6 +38,35 @@ class CreateHoursEntryViewController : UIViewController {
         dateFieldPicker.addTarget(self, action: #selector(CreateHoursEntryViewController.dateChanged(datePicker:)), for: .valueChanged)
         eventStartTimePicker.addTarget(self, action: #selector(CreateHoursEntryViewController.eventStartTimeChanged(datePicker:)), for: .valueChanged)
         eventEndTimePicker.addTarget(self, action: #selector(CreateHoursEntryViewController.eventEndTimeChanged(datePicker:)), for: .valueChanged)
+
+            
+            if let hoursEntry = hoursEntry {
+                contentTextView.text = hoursEntry.content
+                eventTitleTextField.text = hoursEntry.entryTitle
+                organizationTextField.text = hoursEntry.organization
+                eventEndTimePicker.date = hoursEntry.timeTo!
+                eventStartTimePicker.date = hoursEntry.timeFrom!
+                dateFieldPicker.date = hoursEntry.date!
+                
+                eventStartTimeTextField.text = hoursEntry.timeFrom?.convertTimeToString()
+                eventEndTimeTextField.text = hoursEntry.timeTo?.convertTimeToString()
+                dateTextField.text = hoursEntry.date?.convertDateToString()
+                
+                
+            } else {
+                
+                contentTextView.text = ""
+                eventTitleTextField.text = ""
+                organizationTextField.text = ""
+                eventEndTimePicker.date = Date()
+                eventStartTimePicker.date = Date()
+                dateFieldPicker.date = Date()
+                
+                eventStartTimeTextField.text = eventStartTimePicker.date.convertTimeToString()
+                eventEndTimeTextField.text = eventEndTimePicker.date.convertTimeToString()
+                dateTextField.text = dateFieldPicker.date.convertDateToString()
+            }
+        
         
     }
     
@@ -94,7 +123,6 @@ class CreateHoursEntryViewController : UIViewController {
             
         case "done" where hoursEntry != nil:
             
-            hoursEntry = setHoursEntryAttributes()
             hoursEntry = setHoursEntryAttributes()
             
             CoreDataHelper.saveHoursEntry()

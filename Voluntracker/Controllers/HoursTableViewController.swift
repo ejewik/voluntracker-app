@@ -10,7 +10,6 @@ import UIKit
 
 class HoursTableViewController: UITableViewController {
     
-    //TODO: handle description var (make it show! check if borderless text view class works)
     //TODO: figure out how to refactor ui code into another file
     //TODO: add operations (delete, cancel entry)
     //TODO: figure out how to handle segmented control for donations
@@ -92,6 +91,11 @@ class HoursTableViewController: UITableViewController {
             currentCell.dateLabel?.text = hoursEntry.date!.convertDateToString()
             currentCell.hourLabel?.text = String(hoursEntry.hours)
             currentCell.minuteLabel?.text = String(hoursEntry.minutes)
+            
+            if(currentCell.entryTitleLabel.text == "") {
+                currentCell.entryTitleLabel.text = "event title"
+                currentCell.organizationLabel.text = "organization"
+            }
             
             return currentCell;
         }
