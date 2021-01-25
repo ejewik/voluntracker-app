@@ -16,9 +16,13 @@ class HoursTableViewController: UITableViewController {
     //also edit entry button iboutlet is not connected
     //possible approach to refactoring date code: use date extension and use text field as function arg and keep #selector part in VC?
     //need to make time to rebuild createentryvc ui from scratch
+    //create underline for dateTextFields
+    //round hour labels?
+    //embed tab bar
+    //add side bar
 
     @IBOutlet var hourDonationSegmentedButton: UISegmentedControl!
-    @IBOutlet var addEntryButton: UIButton!
+    @IBOutlet var addEntryButton: UIBarButtonItem!
     @IBOutlet var editEntryButton: UIButton!
     
     var hoursEntries = [HoursEntry]() {
@@ -60,6 +64,7 @@ class HoursTableViewController: UITableViewController {
     
     @IBAction func unwindToHoursTableViewController(sender: UIStoryboardSegue) {
         hoursEntries = CoreDataHelper.retrieveHoursEntries()
+        print("unwinding...")
         
     }
     
@@ -98,6 +103,15 @@ class HoursTableViewController: UITableViewController {
             }
             
             return currentCell;
+        }
+        
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+                 if editingStyle == .delete {
+                    let entryToDelete = hoursEntries[indexPath.row]
+                    CoreDataHelper.deleteHoursEntry(entry: entryToDelete)
+                    hoursEntries = CoreDataHelper.retrieveHoursEntries()
+            }
         }
 }
 

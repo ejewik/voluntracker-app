@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 struct CoreDataHelper {
-    static let context: NSManagedObjectContext = {
+    static let hoursContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()
         }
@@ -34,7 +34,7 @@ struct CoreDataHelper {
     }()
     
     static func newHoursEntry() -> HoursEntry {
-        let entry = NSEntityDescription.insertNewObject(forEntityName: "HoursEntry", into: context) as! HoursEntry
+        let entry = NSEntityDescription.insertNewObject(forEntityName: "HoursEntry", into: hoursContext) as! HoursEntry
         
         return entry
     }
@@ -42,14 +42,14 @@ struct CoreDataHelper {
     
     static func saveHoursEntry() {
         do {
-            try context.save()
+            try hoursContext.save()
         } catch let error {
             print("Could not save \(error.localizedDescription)")
         }
     }
     
     static func deleteHoursEntry(entry: HoursEntry) {
-        context.delete(entry)
+        hoursContext.delete(entry)
         
         saveHoursEntry()
     }
@@ -57,7 +57,43 @@ struct CoreDataHelper {
     static func retrieveHoursEntries() -> [HoursEntry] {
         do {
             let fetchRequest = NSFetchRequest<HoursEntry>(entityName: "HoursEntry")
-            let results = try context.fetch(fetchRequest)
+            let results = try hoursContext.fetch(fetchRequest)
+            
+            return results
+        } catch let error {
+            print("Could not fetch \(error.localizedDescription)")
+            
+            return []
+        }
+    }
+    
+    // donation methods
+    
+    static func newDonationsEntry() -> DonationsEntry {
+        let entry = NSEntityDescription.insertNewObject(forEntityName: "DonationsEntry", into: donationContext) as! DonationsEntry
+        
+        return entry
+    }
+    
+    
+    static func saveDonationsEntry() {
+        do {
+            try donationContext.save()
+        } catch let error {
+            print("Could not save \(error.localizedDescription)")
+        }
+    }
+    
+    static func deleteDonationsEntry(entry: DonationsEntry) {
+        donationContext.delete(entry)
+        
+        saveDonationsEntry()
+    }
+    
+    static func retrieveDonationsEntries() -> [DonationsEntry] {
+        do {
+            let fetchRequest = NSFetchRequest<DonationsEntry>(entityName: "DonationsEntry")
+            let results = try donationContext.fetch(fetchRequest)
             
             return results
         } catch let error {

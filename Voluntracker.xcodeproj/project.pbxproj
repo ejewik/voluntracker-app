@@ -17,6 +17,8 @@
 		4B403EB42426AF5C0020F788 /* HoursEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EB32426AF5C0020F788 /* HoursEntryTests.swift */; };
 		4B403EBC2426BEE70020F788 /* CreateHoursEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */; };
 		4B403EBE242825940020F788 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B403EBD242825940020F788 /* DateExtension.swift */; };
+		4B42543725BE7172003F3887 /* DonationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42543625BE7172003F3887 /* DonationsTableViewController.swift */; };
+		4B42543925BE8642003F3887 /* CreateDonationsEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42543825BE8642003F3887 /* CreateDonationsEntryViewController.swift */; };
 		4B7CFCC823DC0CED008B2EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */; };
 		4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */; };
 		4B7CFCCD23DC0CED008B2EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7CFCCB23DC0CED008B2EB2 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		4B403EB52426AF5C0020F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHoursEntryViewController.swift; sourceTree = "<group>"; };
 		4B403EBD242825940020F788 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		4B42543625BE7172003F3887 /* DonationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsTableViewController.swift; sourceTree = "<group>"; };
+		4B42543825BE8642003F3887 /* CreateDonationsEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDonationsEntryViewController.swift; sourceTree = "<group>"; };
 		4B7CFCC423DC0CED008B2EB2 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7CFCC723DC0CED008B2EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTableViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			children = (
 				4B7CFCC923DC0CED008B2EB2 /* HoursTableViewController.swift */,
 				4B403EBB2426BEE70020F788 /* CreateHoursEntryViewController.swift */,
+				4B42543625BE7172003F3887 /* DonationsTableViewController.swift */,
+				4B42543825BE8642003F3887 /* CreateDonationsEntryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B09854B257A5BD100BFE7A0 /* BorderlessTextView.swift in Sources */,
+				4B42543925BE8642003F3887 /* CreateDonationsEntryViewController.swift in Sources */,
+				4B42543725BE7172003F3887 /* DonationsTableViewController.swift in Sources */,
 				4B05B5B32424260900DA54A9 /* HoursEntry.swift in Sources */,
 				4B403EBC2426BEE70020F788 /* CreateHoursEntryViewController.swift in Sources */,
 				4B7CFCCA23DC0CED008B2EB2 /* HoursTableViewController.swift in Sources */,
